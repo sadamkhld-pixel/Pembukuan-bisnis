@@ -9,6 +9,9 @@ workflows:
       - name: Generate missing Android folder
         script: |
           flutter create . --platforms=android
+      - name: Clean and get dependencies
+        script: |
+          flutter clean
           flutter pub get
       - name: Build APK
         script: |
