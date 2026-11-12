@@ -249,7 +249,8 @@ class _FormPageState extends State<FormPage> {
     } else {
       await DBHelper.update(item);
     }
-    if (mounted) Navigator.pop(context);
+    // PERBAIKAN ADA DI SINI (menggunakan context.mounted)
+    if (context.mounted) Navigator.pop(context);
   }
 
   @override
